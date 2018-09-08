@@ -1,0 +1,14 @@
+package edu.mum.amqp;
+
+import edu.mum.domain.Item;
+
+
+public class ItemListener {
+
+	public void listen(Item i) {
+		
+		String name = i.getName();
+		System.out.println("---------- AMQPClient Order for Product on ANSWER Queue: " + name);
+	}
+
+}

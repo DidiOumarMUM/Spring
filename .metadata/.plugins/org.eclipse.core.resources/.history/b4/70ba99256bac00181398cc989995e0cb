@@ -1,0 +1,26 @@
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class jav8test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		List<String> l = new ArrayList<String>();
+		l.add("didi"); l.add("oumar"); l.add("abc") ;
+		
+  // sort using java 7 
+		Collections.sort(l , new Comparator<String>() {
+			@Override
+			public int compare(String s , String d )
+			{
+				return d.compareTo(s) ;
+			}
+		});
+		l.forEach(c  -> System.out.println(c));
+		// sort using java 8
+	}
+
+}

@@ -1,0 +1,3 @@
+#Tomcat publish data
+#Tue Aug 07 10:59:18 CDT 2018
+org.eclipse.jst.jee.server\:eTrade=D\:\\EA\\spring-tool-suite-3.9.2.RELEASE-e4.7.2-win32 (1)\\sts-bundle\\pivotal-tc-server-developer-3.2.8.RELEASE\\base-instance\\wtpwebapps\\eTrade

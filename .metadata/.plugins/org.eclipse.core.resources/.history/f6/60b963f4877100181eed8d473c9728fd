@@ -1,0 +1,25 @@
+import java.util.List;
+
+public class Test {
+
+	A a = new B() ;
+	C c = new D() ;
+	
+	
+	public static void main(String[] args)
+	{
+		System.out.println("ok") ;
+	}
+	
+	public static List<Integer> rotate (List<Integer> l , int d)
+	{
+		int [] mynumber = new int [d] ;
+		for(int i=0 ; i<d ; i++)
+		{
+			int c= l.get(d) ;
+			l.remove(d) ;
+			l.add(c) ;
+		}
+		return l ;
+	}
+}

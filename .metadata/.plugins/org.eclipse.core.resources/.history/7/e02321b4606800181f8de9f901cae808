@@ -1,0 +1,10 @@
+
+public class B extends A{
+//here 
+	@Override
+	public void m() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

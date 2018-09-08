@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;edu.mum.validation.groups&apos; to &apos;Lab_8_Validation_Solution/src/main/java&apos;&#x0D;&#x0A;- Original project: &apos;ValidationGroupsDesktop&apos;&#x0D;&#x0A;- Destination element: &apos;Lab_8_Validation_Solution/src/main/java&apos;&#x0D;&#x0A;- Original element: &apos;ValidationGroupsDesktop/src/main/java/edu.mum.validation.groups&apos;" description="Copy package" destination="=Lab_8_Validation_Solution/src\/main\/java" element1="/src\/main\/java&lt;edu.mum.validation.groups" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1520561475124" version="1.0"/>
+</session>

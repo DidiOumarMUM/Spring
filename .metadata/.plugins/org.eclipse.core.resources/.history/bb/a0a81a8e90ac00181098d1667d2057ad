@@ -1,0 +1,30 @@
+import java.util.List;
+
+public class BinaryTree {
+	
+	BinaryNode root ;
+	
+	public BinaryTree(int val)
+	{
+		this.root=new BinaryNode(val) ;
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+	}
+
+}
+
+class BinaryNode {
+	
+	int data ;
+	BinaryNode left , right ;
+	public BinaryNode(int val)
+	{
+		this.data=val ;
+		this.left=this.right=null ;
+	}
+	
+}

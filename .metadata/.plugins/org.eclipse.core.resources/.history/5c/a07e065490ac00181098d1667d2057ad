@@ -1,0 +1,17 @@
+
+public class BinaryTree {
+	
+
+}
+
+class BinaryNode {
+	
+	int data ;
+	BinaryNode left , right ;
+	public BinaryNode(int val)
+	{
+		this.data=val ;
+		this.left=this.right=null ;
+	}
+	
+}

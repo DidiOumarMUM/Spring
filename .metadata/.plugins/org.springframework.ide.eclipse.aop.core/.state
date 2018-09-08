@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="ManyToManyUni"/>
+<aop-project name="Final_project"/>
+<aop-project name="springbootrestapiexample"/>
+<aop-project name="Lab_8_ValidationGroupSol"/>
+<aop-project name="RestFull_Point_Sale"/>
+<aop-project name="MemberSpringMVC"/>
+<aop-project name="JoinFetchCartesian"/>
+<aop-project name="MemberRestJSON"/>
+<aop-project name="Point-of-sale"/>
+</aop-reference-model>

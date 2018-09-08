@@ -1,0 +1,77 @@
+import java.util.List;
+
+public class BinaryTree {
+	
+	BinaryNode root ;
+	
+	public BinaryTree(int val)
+	{
+		this.root=new BinaryNode(val) ;
+	}
+	
+	public BinaryNode insertNode(BinaryNode node , int val)
+	{
+		BinaryNode myNode = node ;
+		if(myNode==null) myNode = new BinaryNode(val) ;
+		
+		if(myNode.data<node.data )
+				{
+					if(myNode.right==null)
+								{
+									myNode.right=new BinaryNode(val) ;
+								
+								}
+					else {
+						     return insertNode(myNode.right , val);
+					     }
+				}
+		else {
+						if(myNode.left==null)
+						{
+						myNode.left =new BinaryNode(val) ;
+										
+							}
+						else
+							{return insertNode(myNode.left , val);
+							
+							}
+			 }
+					
+				
+		return null ;
+	}
+	
+	public void print(BinaryNode root)
+	{
+		if(root==null) return ;
+		print(root.left) ;
+		System.out.println(root.data);
+		print(root.right) ;
+		
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		BinaryTree bin =new BinaryTree(5) ;
+		bin.insertNode(bin.root, 3) ;
+		bin.insertNode(bin.root, 10) ;
+		bin.insertNode(bin.root, 1) ;
+		bin.insertNode(bin.root, 2) ;
+		bin.insertNode(bin.root, 12) ;
+		bin.insertNode(bin.root, 11) ;
+		bin.print(bin.root);
+		
+	}
+
+}
+
+class BinaryNode {
+	
+	int data ;
+	BinaryNode left , right ;
+	public BinaryNode(int val)
+	{
+		this.data=val ;
+		this.left=this.right=null ;
+	}
+	
+}

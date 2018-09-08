@@ -1,0 +1,287 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+
+
+public class Test {
+
+	A a = new B() ;
+	C c = new D() ;
+	public Test()
+	{
+		super() ;	
+	}
+	
+	public final static  void main(String[] args) 
+	{
+System.out.println(BudyString("abaaaaaaa" , "baaaaaaaa"));
+
+System.out.println(longestSubstring("aba" , "cdba")) ;
+	
+	}
+	public static int time (int [] arr , int pos )
+	{
+		int time=0 ;	
+		int nbrticket=arr[pos] ;
+		  int length =arr.length - 1 ;
+		 
+		for(int i=0 ; i< nbrticket ; i++)
+		{
+			
+			if(i==0) time=pos ;
+			
+			else
+			{
+			
+			  for(int j=0  ; j<arr.length ; j++)
+			  {
+				  if(arr[j]>0 )
+					  {   
+					  arr[j]=arr[j]-1 ; 
+					  if(arr[j]==0)  {length-- ; }
+					 }
+				 
+			  }
+			}
+			  
+			
+			  time=time+length ;
+		}
+		
+		
+		return time; 
+	}
+	
+	
+	
+	
+	public static List<Integer> rotate (List<Integer> l , int d)
+	{
+	
+		for(int i=0 ; i<d ; i++)
+		{
+			int c= l.get(0) ;
+			//System.out.println(c);
+			l.remove(0) ;
+			l.add(c) ;
+		} 
+		return l ;
+	}
+	
+	static int nonDivisibleSubset(int k, int[] S) {
+
+       int x=0 ;
+       int res=0; 
+       while(x< S.length-1)
+       {
+    	   for(int i=x+1 ; i<S.length ; i++)
+    	   {
+    		   if((S[x]+S[i])%k!=0) res++ ;
+    	   }
+    	   System.out.println(S[x]);
+    	   x++ ;
+    	   
+       }
+		
+		return res;
+    }
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static int sherif(int[] arr , int pos )
+	{
+		 int time=0 ;
+		
+		 for(int i=0 ; i<arr.length ; i++)
+		 {
+			 if(arr[i]>arr[pos] && i<pos ) time=time+arr[pos] ;
+			 if(arr[i]>arr[pos] && i>pos ) time=time+arr[i]-arr[pos] ;
+			 else
+			 {
+				 time=arr[i]+arr[i] ;
+			 }
+		 }
+		 
+		
+		
+		return time; 
+	}
+	
+	
+	
+	
+	public static boolean BudyString(String a , String b)
+	{
+		/*if(a.length() != b.length()) return false ;
+		if(a.equals(b)) {
+			for (Character c : a.toCharArray()) {
+				if(a.indexOf(c) != a.lastIndexOf(c)) {
+					return true;
+				}
+			}
+			return false;
+		} 
+		else
+		{
+			int indexOne = -1;
+			int indexTwo = -1;
+			int index = 0;
+			int count = 0;
+			
+			for (Character c : a.toCharArray()) {
+				if(count > 2) {
+					return false ;
+				}
+				if(!c.equals(b.charAt(index))) {
+					count++;
+					if(indexOne != -1) indexTwo = index;
+					else indexOne = index;
+				}
+				index++;
+			} 
+			
+			char[] aChar = a.toCharArray();
+			char[] bChar = b.toCharArray();
+			
+			if((aChar[indexOne] == bChar[indexTwo] && aChar[indexTwo] == bChar[indexOne]) || 
+				(aChar[indexTwo] == bChar[indexOne] && aChar[indexOne] == bChar[indexTwo]) ) {
+				return true;
+			}else {
+				return false;
+			}
+			
+			
+			
+		}*/
+		
+		List<Character> alist = new ArrayList<Character> () ;
+	
+		HashMap<Character , Integer > aMap = new HashMap<Character , Integer> () ;
+		HashMap<Character , Integer > bMap = new HashMap<Character , Integer> () ;
+		
+		if(a.length() !=b.length()) return false ;
+		
+		for(int i=0 ; i<a.length(); i++ )
+		{
+			char c= a.charAt(i) ;
+			char d=b.charAt(i) ;
+			Integer val = aMap.get(c) ;
+			Integer val2 = bMap.get(d) ;
+			if(val==null) {
+				aMap.put(c, 1) ;
+			}
+			else {
+				aMap.put(c, new Integer(val+1)) ;
+			}
+			
+			if(val2==null) {
+			bMap.put(d, 1) ;
+			}
+			else {
+				bMap.put(d, new Integer(val2+1)) ;
+			}
+		}
+		
+	   
+
+		for(Character c: a.toCharArray())
+		{
+			Integer val = aMap.get(c) ;
+			Integer val2=bMap.get(c) ;
+			if(val2==null) return false ;
+			else {
+			if(val.intValue()!=val2.intValue()) return false ;
+			}
+			
+		}
+	
+	
+		if(  a.length()==b.length())
+		{
+			int ind=0 ;
+			if(a.equals(b))
+			{
+			for(Character c: a.toCharArray())
+			{
+				
+				Integer val = aMap.get(c) ;
+				
+				if(val.intValue() >1) ind++ ;
+			   	
+			}
+			}
+			
+			int count =0 ;
+			for(int i=0 ;i<a.length() ;i++)
+			{
+				int j= a.indexOf(a.charAt(i)) ;
+				int l= b.indexOf(a.charAt(i)) ;
+				
+				
+				if(l!=j) count++ ;
+				System.out.println(j+"****"+l ) ;
+			}
+			if(count>2 || count==0  || (ind>1 && count>2 )) return false ;
+			else {
+				return true ;
+			}
+		}
+		
+		return true ;
+		
+	}
+	
+	
+	
+	public static boolean subCommunString(String s1 , String s2)
+	{
+		
+		for(int i=0 ; i< s1.length(); i++) {
+			Character c = s1.charAt(i) ;
+			if(s2.contains(c.toString())) return true ; ;
+			
+		}
+	
+		return false;
+	}
+	
+	
+	public static String longestSubstring(String s1 , String s2)
+	{
+		
+		List<String> l = new ArrayList<String>() ;
+		for(int i=0 ; i< s1.length(); i++) {
+			Character c = s1.charAt(i) ;
+			l.add(c.toString()) ;
+			StringBuilder str = new StringBuilder(c.toString()) ;
+			for(int j=i+1 ; j< s1.length(); j++) 
+			     {
+				Character ca = s1.charAt(j) ;
+			         str.append(ca.toString()) ;
+			         l.add(str.toString()) ;
+			      }
+		}
+	     int leng =0 ;
+	     String result ="" ;
+		for(String st : l)
+		{ 
+			System.out.println(st);
+			if(s2.contains(st) && st.length()>=leng)   result=st ;
+			
+		}
+		return result;
+	}
+	
+}

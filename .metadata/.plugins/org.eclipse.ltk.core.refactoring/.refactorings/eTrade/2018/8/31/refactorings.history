@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;errorMessages.properties&apos; to &apos;Point-of-sale/src/main/resources&apos;&#x0D;&#x0A;- Original project: &apos;eTrade&apos;&#x0D;&#x0A;- Destination element: &apos;Point-of-sale/src/main/resources&apos;&#x0D;&#x0A;- Original element: &apos;errorMessages.properties&apos;" description="Copy file" destination="=Point-of-sale/src\/main\/resources" element1="src/main/resources/errorMessages.properties" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1533151348325" units="0" version="1.0"/>
+</session>

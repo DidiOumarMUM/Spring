@@ -1,0 +1,5 @@
+package edu.mum.main;
+
+public interface B {
+
+}
