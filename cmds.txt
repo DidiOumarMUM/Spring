@@ -1,0 +1,35 @@
+clone project :
+
+git clone https://github.com/jibolash/TwitterClient.git
+
+go to the project :
+ cd TwitterClient/
+ 
+ create branche :
+  git branch devbranch
+
+switch to the branch 
+git checkout devbranch
+
+check status 
+$ git status
+
+create file or change and add it 
+$ git add test.txt
+
+commit it 
+$ git commit -m "create test.txt"
+
+push it to devbranch 
+$ git push origin devbranch
+
+in order to merge we should be in branche master
+$ git checkout master
+$ git merge devbranch
+$ git push origin master
+
+delete branch i should be in master  branche  :
+$ git branch -d devbranch
+$ git branch -d origin devbranch
+$ git push --delete origin devbranch
+
